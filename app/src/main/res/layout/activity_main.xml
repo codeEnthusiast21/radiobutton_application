@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="what do you want on your burger"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgmeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/rbchicken"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chicken" />
+
+        <RadioButton
+            android:id="@+id/rbmutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mutton" />
+
+        <RadioButton
+            android:id="@+id/rbbacon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bacon" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgsauces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgmeat"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/rbmayo"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mayo" />
+
+        <RadioButton
+            android:id="@+id/rbtandoori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tandoori" />
+
+        <RadioButton
+            android:id="@+id/rbsalsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="salsa" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgsalad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgsauces"
+        android:orientation="horizontal" >
+    <RadioButton
+        android:id="@+id/rbonions"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="onions" />
+
+    <RadioButton
+        android:id="@+id/rbtomatoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tomatoes" />
+
+    <RadioButton
+        android:id="@+id/rbcucumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cicimner" />
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/rgcheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgsalad">
+
+        <RadioButton
+            android:id="@+id/rbblue"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="blue" />
+
+        <RadioButton
+            android:id="@+id/rbmoza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mozarella" />
+
+        <RadioButton
+            android:id="@+id/rbohh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ohhh yeah special" />
+
+    </RadioGroup>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="288dp"
+        android:fontFamily="monospace"
+        android:text="order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgcheese"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/finalorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:fontFamily="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
